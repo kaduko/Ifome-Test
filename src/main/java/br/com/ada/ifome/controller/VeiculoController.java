@@ -14,7 +14,8 @@ public class VeiculoController {
 
     @PostMapping
     public ResponseEntity<Veiculo> salvar(@RequestBody Veiculo veiculo) {
-        return ResponseEntity.status(201).body(veiculousuarioService.salvar(veiculo));
+        Veiculo response = veiculousuarioService.salvar(veiculo);
+        return ResponseEntity.status(201).body(response);
     }
 
 //    @PutMapping("/{id}")
